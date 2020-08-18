@@ -13,9 +13,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "red_bird",
+"name": "blue_bird",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 6 ) ],
@@ -23,9 +23,9 @@ animations = [ {
 "name": "yellow_bird",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "blue_bird",
+"name": "red_bird",
 "speed": 5.0
 } ]
 
@@ -33,6 +33,7 @@ animations = [ {
 height = 12.1105
 
 [node name="Bird" type="RigidBody2D"]
+collision_mask = 2
 gravity_scale = 3.0
 script = ExtResource( 1 )
 __meta__ = {
@@ -42,6 +43,7 @@ __meta__ = {
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "blue_bird"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

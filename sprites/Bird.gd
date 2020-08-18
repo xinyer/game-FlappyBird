@@ -1,7 +1,7 @@
 extends RigidBody2D
 
-const WIDTH = 480
-const HEIGHT = 720
+const WIDTH = 450
+const HEIGHT = 800
 
 func _ready():
 	global_position.x = WIDTH/2
@@ -9,6 +9,7 @@ func _ready():
 	pass
 
 func _process(delta):
+	
 	if rotation_degrees < -30:
 		rotation_degrees = -30
 		angular_velocity = 0
