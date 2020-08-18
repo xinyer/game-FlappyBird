@@ -30,15 +30,15 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-height = 12.1105
+radius = 11.0693
+height = 12.014
 
 [node name="Bird" type="RigidBody2D"]
 collision_mask = 2
-gravity_scale = 3.0
+gravity_scale = 5.0
+contacts_reported = 1
+contact_monitor = true
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
@@ -47,6 +47,7 @@ frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.475403, 1.65341 )
+position = Vector2( -0.747032, 0.29524 )
 rotation = 1.5708
 shape = SubResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_Bird_body_entered"]

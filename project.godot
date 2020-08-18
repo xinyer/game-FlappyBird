@@ -19,6 +19,11 @@ config/name="Flappy Bird"
 run/main_scene="res://scenes/MainScene.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+AudioManager="*res://scenes/AudioManager.tscn"
+Global="*res://scripts/Global.gd"
+
 [display]
 
 window/size/width=450
@@ -38,6 +43,7 @@ click={
 
 2d_physics/layer_1="bird"
 2d_physics/layer_2="floor"
+2d_physics/layer_3="pipe"
 
 [rendering]
 
