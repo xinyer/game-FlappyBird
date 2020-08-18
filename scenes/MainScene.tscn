@@ -10,7 +10,7 @@ shader = ExtResource( 4 )
 shader_param/speed = 0.2
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 272, 16 )
+extents = Vector2( 225, 16 )
 
 [node name="MainScene" type="Node2D"]
 
@@ -27,11 +27,13 @@ position = Vector2( 230, 781.409 )
 scale = Vector2( 1.55952, 1.61769 )
 texture = ExtResource( 3 )
 
-[node name="FloorHitBox" type="Area2D" parent="Background"]
+[node name="FloorHitBox" type="StaticBody2D" parent="Background"]
 collision_layer = 2
 
+[node name="Sprite" type="Sprite" parent="Background/FloorHitBox"]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/FloorHitBox"]
-position = Vector2( 224, 712 )
+position = Vector2( 225, 709 )
 shape = SubResource( 1 )
 
 [node name="Bird" parent="." instance=ExtResource( 2 )]
