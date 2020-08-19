@@ -5,6 +5,7 @@ var start = false
 var game_over = false
 
 func _ready():
+	Global.score = 0
 	$Bird.visible = false
 	pass
 
@@ -13,7 +14,7 @@ func _process(delta):
 	pass
 
 func _input(event):
-	if event.is_action_pressed("click"):
+	if event.is_action_pressed("click") or (event is InputEventScreenTouch and event.is_pressed()):
 		if not start:
 			start_game()
 		if game_over:

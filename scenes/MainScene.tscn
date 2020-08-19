@@ -13,7 +13,7 @@ shader = ExtResource( 4 )
 shader_param/speed = 0.2
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 223, 13 )
+extents = Vector2( 235.708, 13 )
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource( 7 )
@@ -27,8 +27,8 @@ texture = ExtResource( 1 )
 
 [node name="Floor" type="Sprite" parent="Background"]
 material = SubResource( 1 )
-position = Vector2( 227, 777.909 )
-scale = Vector2( 1.54167, 1.55519 )
+position = Vector2( 227.332, 908.531 )
+scale = Vector2( 1.54759, 2.19457 )
 z_index = 2
 texture = ExtResource( 3 )
 
@@ -39,10 +39,11 @@ collision_layer = 2
 [node name="Sprite" type="Sprite" parent="Background/FloorHitBox"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/FloorHitBox"]
-position = Vector2( 224, 705 )
+position = Vector2( 222.674, 801.806 )
 shape = SubResource( 2 )
 
 [node name="Bird" parent="." instance=ExtResource( 2 )]
+position = Vector2( 231.869, 393.614 )
 gravity_scale = 0.0
 
 [node name="PipeCreateTimer" type="Timer" parent="."]
