@@ -51,5 +51,6 @@ wait_time = 2.5
 script = ExtResource( 5 )
 
 [node name="UI" parent="." instance=ExtResource( 6 )]
+
 [connection signal="bird_dead" from="Bird" to="." method="_on_Bird_bird_dead"]
 [connection signal="timeout" from="PipeCreateTimer" to="PipeCreateTimer" method="_on_PipeCreateTimer_timeout"]
